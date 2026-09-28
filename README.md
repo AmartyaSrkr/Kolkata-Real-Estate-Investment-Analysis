@@ -18,35 +18,35 @@ Designed to identify data inconsistencies, validate data integrity, and ensure d
 
 ---
 
-## 🧪 Testing Scope & Approach
+## Testing Scope & Approach
 
 ### **Test Categories**
 
-#### 1️⃣ **Data Validation Testing**
+#### 1️. **Data Validation Testing**
 Verified that raw unstructured data was correctly transformed and standardized:
 - **Price Standardization Test:** Validated conversion of text denominations ("Lac", "Cr") to exact numeric INR values
 - **Area Extraction Test:** Verified unit stripping ("sqft") and string-to-numeric casting accuracy
 - **Regex Extraction Test:** Confirmed property_type and location parsing from title strings with 100% accuracy
 
-#### 2️⃣ **Data Consistency Testing**
+#### 2️. **Data Consistency Testing**
 - **Numeric Consistency:** Achieved 100% consistency in price and area data fields
 - **Null/Empty Value Detection:** Identified missing or malformed data in critical fields
 - **Data Type Validation:** Ensured all fields conform to expected data types (NUMERIC, VARCHAR, etc.)
 
-#### 3️⃣ **Business Logic Testing**
+#### 3️. **Business Logic Testing**
 Validated market segmentation and benchmarking logic:
 - **Market Composition Test:** Verified that 2 BHK and 3 BHK apartments comprise 60%+ of inventory
 - **Price Per Sqft Calculation:** Validated commercial property premium calculations (~₹9,541/sqft)
 - **Neighborhood Ranking Test:** Confirmed PERCENT_RANK() correctly identifies top-tier neighborhoods
 
-#### 4️⃣ **Outlier & Anomaly Detection**
+#### 4️. **Outlier & Anomaly Detection**
 - **Overvalued Property Detection:** Flagged properties 30%+ above neighborhood market averages
 - **Undervalued Property Detection:** Identified spacious properties listing below neighborhood averages
 - **Market Anomaly Identification:** Found inconsistencies in pricing across micro-markets
 
 ---
 
-## 🛠️ Test Execution Stack
+## Test Execution Stack
 
 **Database:** PostgreSQL 18  
 **IDE:** pgAdmin 4  
@@ -64,13 +64,13 @@ Validated market segmentation and benchmarking logic:
 
 ---
 
-## 📊 Test Results & Findings
+## Test Results & Findings
 
 ### **Key QA Metrics:**
-- ✅ **Data Quality Score:** 100% numeric consistency achieved
-- ✅ **Data Standardization:** 3,000+ records successfully transformed
-- ✅ **Anomaly Detection Rate:** Identified outliers in 15-20% of listings
-- ✅ **Test Coverage:** All critical business logic validated
+-  **Data Quality Score:** 100% numeric consistency achieved
+-  **Data Standardization:** 3,000+ records successfully transformed
+-  **Anomaly Detection Rate:** Identified outliers in 15-20% of listings
+-  **Test Coverage:** All critical business logic validated
 
 ### **Quality Issues Identified:**
 1. **Inconsistent Price Formatting** → Resolved through standardization tests
@@ -79,7 +79,7 @@ Validated market segmentation and benchmarking logic:
 
 ---
 
-## 📁 Test Artifacts & Deliverables
+## Test Artifacts & Deliverables
 
 | File | Purpose |
 |------|---------|
@@ -93,7 +93,7 @@ Validated market segmentation and benchmarking logic:
 
 ---
 
-## 🔍 Data Quality Validation Process
+## Data Quality Validation Process
 
 ### **Phase 1: Data Ingestion Testing**
 - Verified CSV import accuracy into PostgreSQL
@@ -129,7 +129,7 @@ Identified and documented properties with anomalous pricing using window functio
 
 ---
 
-## 📋 Test Summary Report
+## Test Summary Report
 
 **Total Records Tested:** 3,000+  
 **Critical Defects Found:** 45  
@@ -139,7 +139,7 @@ Identified and documented properties with anomalous pricing using window functio
 
 ---
 
-## 🚀 How to Review Test Results
+## How to Review Test Results
 
 1. Open `kolkata_real_estate_analysis.sql` in pgAdmin 4
 2. Execute individual test queries to validate specific scenarios
@@ -148,7 +148,7 @@ Identified and documented properties with anomalous pricing using window functio
 
 ---
 
-## 📝 Testing Methodology
+## Testing Methodology
 
 **Test Design:** Black-box functional testing with focus on data quality  
 **Approach:** Automated SQL-based test execution  
@@ -157,22 +157,22 @@ Identified and documented properties with anomalous pricing using window functio
 
 ---
 
-## 📌 Key Learnings & Best Practices
+## Key Learnings & Best Practices
 
-✅ Importance of data validation in analytical pipelines  
-✅ Using window functions for market benchmarking and outlier detection  
-✅ Structured approach to identifying data quality issues  
-✅ Root cause analysis for anomalous data patterns  
+ Importance of data validation in analytical pipelines  
+ Using window functions for market benchmarking and outlier detection  
+ Structured approach to identifying data quality issues  
+ Root cause analysis for anomalous data patterns  
 
 ---
 
-## 📜 License
+## License
 
 MIT License - See LICENSE file for details
 
 ---
 
-## 👤 Author
+## Author
 
 **Amartya Sarkar**  
 GitHub: @AmartyaSrkr
