@@ -5,14 +5,14 @@ Designed to identify data inconsistencies, validate data integrity, and ensure d
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 **Objective:** Conduct end-to-end data quality assurance testing on Kolkata real estate database to:
-- ✅ Validate data consistency across 3,000+ listings
-- ✅ Identify data anomalies and quality issues
-- ✅ Test data transformation accuracy
-- ✅ Verify business logic and data validation rules
-- ✅ Document defects and quality metrics
+-  Validate data consistency across 3,000+ listings
+-  Identify data anomalies and quality issues
+-  Test data transformation accuracy
+-  Verify business logic and data validation rules
+-  Document defects and quality metrics
 
 **Test Environment:** PostgreSQL 18 with pgAdmin 4
 
